@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "title": "Chess Fundamentals for Beginners",
+    "description": "Learn the complete basics of chess including board setup, piece movement, castling, check, and checkmate.",
+    "players": ["GothamChess"],
+    "type": "learning",
+    "thumbnail": "https://i.ytimg.com/vi/OCSbzArwB10/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAZR3-AOWpowvBmTSJK-sKbKiTtiw",
+    "video": "https://youtu.be/OCSbzArwB10?si=rPF4sJqSfbWnGNld",
+    "totalViews": 1847293
+  },
+  {
+    "id": 2,
+    "title": "Magnus Carlsen vs Hikaru Nakamura | Speed Chess Championship",
+    "description": "A thrilling blitz battle between Magnus Carlsen and Hikaru Nakamura.",
+    "players": ["Magnus Carlsen", "Hikaru Nakamura"],
+    "type": "matches",
+    "thumbnail": "https://i.ytimg.com/vi/L2cbT3elGl8/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB2OUO4mfNque2NU-JAww2EcxQyTQ",
+    "video": "https://youtu.be/L2cbT3elGl8?si=8a555e1OYASiAO80",
+    "totalViews": 4210456
+  },
+  {
+    "id": 3,
+    "title": "Italian Game Opening Explained",
+    "description": "Master the Italian Opening with tactical ideas and attacking patterns.",
+    "players": ["Daniel Naroditsky"],
+    "type": "learning",
+    "thumbnail": "https://i.ytimg.com/vi/jkqf0rD8E2A/maxresdefault.jpg",
+    "video": "https://i.ytimg.com/vi/qUews8fEGkc/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBUUQlmJinQ9lLP2Dtx3VJqY54qaw",
+    "totalViews": 912384
+  },
+  {
+    "id": 4,
+    "title": "Queen's Gambit Opening Guide",
+    "description": "Understand the most famous d4 opening in chess history.",
+    "players": ["Hanging Pawns"],
+    "type": "learning",
+    "thumbnail": "https://i.ytimg.com/vi/mtsabsZ4wG4/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBml8gjs1ofhpVKPxj1geC0kRaptw",
+    "video": "https://youtu.be/CMy65JeSShw?si=JjvUj4SdUQ1xqQ72",
+    "totalViews": 654219
+  },
+  {
+    "id": 5,
+    "title": "Magnus Carlsen vs Fabiano Caruana | World Championship",
+    "description": "One of the greatest modern world championship clashes.",
+    "players": ["Magnus Carlsen", "Fabiano Caruana"],
+    "type": "matches",
+    "thumbnail": "https://i.ytimg.com/vi/QFs8OiQ3LIY/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLA3SoNzZImxw1HGmaXAxMk14QRWxw",
+    "video": "https://youtu.be/QFs8OiQ3LIY?si=FC1TI4ixALrN5Z3-",
+    "totalViews": 2876541
+  },
+  {
+    "id": 6,
+    "title": "Chess Tactics Every Player Must Know",
+    "description": "Learn forks, pins, skewers, discovered attacks, and mating nets.",
+    "players": ["John Bartholomew"],
+    "type": "learning",
+    "thumbnail": "https://i.ytimg.com/vi/rowmOe7SR00/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDSZzQFjTU-d76G7SB5cRniJOKNVA",
+    "video": "https://youtu.be/rowmOe7SR00?si=A9e2X3KB6Ef79VPh",
+    "totalViews": 1209834
+  },
+  {
+    "id": 7,
+    "title": "Hikaru Nakamura Bullet Chess Masterclass",
+    "description": "Watch Hikaru dominate elite opponents in bullet chess.",
+    "players": ["Hikaru Nakamura"],
+    "type": "matches",
+    "thumbnail": "https://i.ytimg.com/vi/NvVT_Q0RPG0/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDcCYGI1CAhAfj2dOnoQE5K5upgcA",
+    "video": "https://youtu.be/NvVT_Q0RPG0?si=uPzB9g0OSxeJLFyP",
+    "totalViews": 5021845
+  },
+  {
+    "id": 8,
+    "title": "How to Checkmate with Queen and King",
+    "description": "Essential beginner endgame tutorial.",
+    "players": ["ChessNetwork"],
+    "type": "learning",
+    "thumbnail": "https://i.ytimg.com/vi/_y9f0A8Q2sQ/maxresdefault.jpg",
+    "video": "https://i.ytimg.com/vi/Cbh2pRvM3aU/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLANTcZh1Y9zcTFEHA_E29KVi3j8hw",
+    "totalViews": 489213
+  },
+  {
+    "id": 9,
+    "title": "Bobby Fischer vs Boris Spassky | 1972",
+    "description": "Historic world championship game from the Match of the Century.",
+    "players": ["Bobby Fischer", "Boris Spassky"],
+    "type": "matches",
+    "thumbnail": "https://i.ytimg.com/vi/i_M72rMdb3U/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBHH8wtG4ef8g0mvU_wkovE5jSHzw",
+    "video": "https://youtu.be/i_M72rMdb3U?si=V5wVq6fkO590aM2I",
+    "totalViews": 3875431
+  },
+   {
+    "id": 10,
+    "title": "London System for Beginners",
+    "description": "Easy and aggressive opening system for white players.",
+    "players": ["GothamChess"],
+    "type": "learning",
+    "thumbnail": "https://i.ytimg.com/vi/tqunaKj6ilE/hqdefault.jpg",
+    "video": "https://youtu.be/tqunaKj6ilE?si=Fma25AIBeSj7ZouJ",
+    "totalViews": 1450923
+  },
+  {
+    "id": 11,
+    "title": "Kasparov vs Deep Blue",
+    "description": "The legendary human vs computer chess battle.",
+    "players": ["Garry Kasparov", "Deep Blue"],
+    "type": "matches",
+    "thumbnail": "https://i.ytimg.com/vi/-i9wcusTwSo/hq720.jpg",
+    "video": "https://youtu.be/-i9wcusTwSo?si=bx8Fr56WQ_0hMq3X",
+    "totalViews": 6123745
+  },
+  {
+    "id": 12,
+    "title": "Sicilian Defense Explained",
+    "description": "The most aggressive defense against 1.e4.",
+    "players": ["Remote Chess Academy"],
+    "type": "learning",
+    "thumbnail": "https://i.ytimg.com/vi/49H728S_VjM/hq720.jpg",
+    "video": "https://youtu.be/49H728S_VjM?si=46Ljt4iMovM-eA6d",
+    "totalViews": 843912
+  },
+  {
+    "id": 13,
+    "title": "Praggnanandhaa Beats Magnus Carlsen",
+    "description": "Historic victory by Indian prodigy Praggnanandhaa.",
+    "players": ["R Praggnanandhaa", "Magnus Carlsen"],
+    "type": "matches",
+    "thumbnail": "https://i.ytimg.com/vi/mX_fQyxKiPQ/hq720.jpg",
+    "video": "https://youtu.be/mX_fQyxKiPQ?si=eMCua-pZnWkUE975",
+    "totalViews": 2897421
+  },
+  {
+    "id": 14,
+    "title": "Chess Endgames You Must Know",
+    "description": "Important king and pawn endgames every player should master.",
+    "players": ["Daniel Naroditsky"],
+    "type": "learning",
+    "thumbnail": "https://i.ytimg.com/vi/2miolLK8DiI/hq720.jpg",
+    "video": "https://youtu.be/2miolLK8DiI?si=W17q2b2Zf10rnETn",
+    "totalViews": 735182
+  },
+  {
+    "id": 15,
+    "title": "Opera Game by Paul Morphy",
+    "description": "One of the greatest attacking games ever played.",
+    "players": ["Paul Morphy"],
+    "type": "matches",
+    "thumbnail": "https://i.ytimg.com/vi/AZxmIkOXvI0/hq720.jpg",
+    "video": "https://youtu.be/AZxmIkOXvI0?si=lkE_o6haRpJWMY5C",
+    "totalViews": 2310451
+  },
+  {
+    "id": 16,
+    "title": "How to Improve Chess Fast",
+    "description": "A practical roadmap to climb rating quickly.",
+    "players": ["GothamChess"],
+    "type": "learning",
+    "thumbnail": "https://i.ytimg.com/vi/QUqq7wSLE78/hq720.jpg",
+    "video": "https://youtu.be/QUqq7wSLE78?si=eZLs5dqkAj38dQQ4",
+    "totalViews": 1678234
+  },
+  {
+    "id": 17,
+    "title": "Magnus Carlsen vs Ian Nepomniachtchi",
+    "description": "World Championship Game 6 marathon battle.",
+    "players": ["Magnus Carlsen", "Ian Nepomniachtchi"],
+    "type": "matches",
+    "thumbnail": "https://i.ytimg.com/vi/rzGTG04u1gs/hq720.jpg",
+    "video": "https://youtu.be/rzGTG04u1gs?si=07nQjmgOSn1p_arY",
+    "totalViews": 2987543
+  },
+  {
+    "id": 18,
+    "title": "Caro-Kann Defense Complete Guide",
+    "description": "Solid opening for black players.",
+    "players": ["Hanging Pawns"],
+    "type": "learning",
+    "thumbnail": "https://i.ytimg.com/vi/fGFl4GjVvrA/hq720.jpg",
+    "video": "https://youtu.be/fGFl4GjVvrA?si=5gB8K7AEmU2xHW9i",
+    "totalViews": 743219
+  },
+  {
+    "id": 19,
+    "title": "The Immortal Game",
+    "description": "The most famous attacking game in chess history.",
+    "players": ["Adolf Anderssen", "Lionel Kieseritzky"],
+    "type": "matches",
+    "thumbnail": "https://i.ytimg.com/vi/_t7BglxHG_c/hq720.jpg",
+    "video": "https://youtu.be/_t7BglxHG_c?si=gMrTefFlX5zD9ljo",
+    "totalViews": 3210542
+  },
+  {
+    "id": 20,
+    "title": "Blindfold Chess Training",
+    "description": "Improve visualization and calculation skills.",
+    "players": ["GothamChess"],
+    "type": "learning",
+    "thumbnail": "https://i.ytimg.com/vi/8erPw1WADrQ/hq720.jpg",
+    "video": "https://youtu.be/8erPw1WADrQ?si=P8VopaOQxv0jmB6u",
+    "totalViews": 567821
+  }
+]
