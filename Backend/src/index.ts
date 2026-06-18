@@ -24,6 +24,12 @@ app.use(
   })
 );
 
+const linkdb = process.env.MONGO_URL;
+
+if (!linkdb) {
+  throw new Error("MONGO_URL is not defined in .env");
+}
+
 // ✅ ROUTES
 app.use("/auth", authRoutes);
 app.use("/netflix", netflixRoutes);
@@ -37,7 +43,7 @@ initSocket(server);
 // 🚀 DB + SERVER START
 const startServer = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URL);
+    await mongoose.connect(linkdb);
     console.log("✅ DB connected");
 
     await sendToDb();
