@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import Topnav from '../components/Topnav'
 import { Usenetflix } from '../store/netflix.store'
+import { Link } from 'react-router-dom'
 const Learn_Chess = () =>  {
 
   const {
@@ -32,7 +33,9 @@ const Learn_Chess = () =>  {
 
           {catogerycontent?.map((data, index) => (
 
-            <div
+            <Link
+
+            to={`/movie/${data.id}`}
               key={index}
               className='relative h-[32vh] rounded-2xl overflow-hidden group cursor-pointer hover:scale-105 transition-all duration-300'
             >
@@ -69,7 +72,7 @@ const Learn_Chess = () =>  {
 
               </div>
 
-            </div>
+            </Link>
           ))}
 
         </div>

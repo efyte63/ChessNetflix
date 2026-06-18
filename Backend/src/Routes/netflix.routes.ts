@@ -3,7 +3,7 @@ import { getbyplayers, getcontent , topten , searchcontent ,findbycatogary } fro
 import { middleware } from "../Middleware/middleware.js";
 const routes = Router();
 routes.get("/getplayers" , getbyplayers);
-routes.get("/getcontent" , getcontent);
+routes.get("/getcontent/:id" , getcontent);
 routes.get("/searchcontent" , searchcontent);
 routes.get("/topten" , topten);
 routes.get("/findbycatogary",findbycatogary);

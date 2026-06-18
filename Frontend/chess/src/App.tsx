@@ -8,6 +8,7 @@ import Chessgame from "./pages/Chessgame";
 import Netflix from "./pages/Netflix";
 import Matches from "./pages/Matches";
 import Learn_Chess from "./pages/Learn_Chess";
+import Des from "./pages/Des";
 
 export default function App() {
   return (
@@ -29,6 +30,8 @@ export default function App() {
         <Route path="/matches" element={<Matches/>}></Route>
 
         <Route path="/learnchess" element={<Learn_Chess/>}></Route>
+
+        <Route path="/movie/:id" element={<Des/>}></Route>
       </Routes>
     
   );

@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  mongo:
+    image: mongo:8
+    container_name: mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    build:
+      context: ./Backend
+    container_name: backend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    environment:
+      MONGO_URL: mongodb://mongo:27017/chess_netflix_app
+      JWT_SECRET: qwerty@12345
+
+  frontend:
+    build:
+      context: ./Frontend/chess
+    container_name: frontend
+    restart: unless-stopped
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    environment:
+      VITE_BACKEND_URL: http://localhost:3000
+
+volumes:
+  mongo_data:

@@ -1,15 +1,33 @@
 import { log } from "console";
 import NetflixModel from "../Databases/NetflixModel.js"
 import { Request, Response } from "express";
+import data from "../json/data.json" with { type: "json" };
+
+const copiedData = JSON.parse(JSON.stringify(data));
 
 interface CustomRequest extends Request {
   userid?: string;
 }
 
+export async function sendToDb() {
+  try {
+    await NetflixModel.insertMany(data);
+    console.log("Data inserted successfully");
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+
 export async function getcontent(req:CustomRequest, res:Response) {
   try {
+    console.log("Route hit");
+  console.log(req.params);
+
     const { id } = req.params; 
-    const content = await NetflixModel.findById(id); 
+    const content = await NetflixModel.findOne({
+      id: Number(id),
+    });
     if (!content) {
       return res.status(404).json({
         msg: "content not found"

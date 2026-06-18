@@ -6,13 +6,16 @@ const Netflix = () => {
   const{topten , gettopten}=Usenetflix();
     const thumbarr = topten?.map((data) => data.thumbnail);
     const titles = topten?.map((data) => data.title);
+    const ids = topten?.map((data)=> data.id);
 
   const data : {
     thumbnail :string[];
     title : string[];
+    ids:number[]
   } = {
     thumbnail:thumbarr||[],
-    title:titles||[]
+    title:titles||[],
+    ids:ids||[]
     }
 
   useEffect(()=>{
@@ -30,7 +33,7 @@ const Netflix = () => {
 
     <iframe
       className="w-full h-full"
-      src="https://www.youtube.com/embed/KHUmeIzb9OM"
+      src="https://www.youtube.com/embed/0zJd6chacL4"
       title="YouTube video player"
       allowFullScreen
     ></iframe>
