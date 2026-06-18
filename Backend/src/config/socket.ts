@@ -1,11 +1,9 @@
-import { Server, Socket } from "socket.io";
-import http from "http";
+import { Server } from "socket.io";
 import { GameManager } from "../Chess/Gamemanager.js";
 
+let io;
 
-let io: Server;
-
-export const initSocket = (server: http.Server) => {
+export const initSocket = (server) => {
   io = new Server(server, {
     cors: {
       origin: "http://localhost:5173",
@@ -15,20 +13,17 @@ export const initSocket = (server: http.Server) => {
 
   const gameManager = new GameManager();
 
-  io.on("connection", (socket: Socket) => {
+  io.on("connection", (socket) => {
     console.log("🔌 User connected:", socket.id);
 
     socket.on("Init_Game", () => {
-      console.log("♟️ Init_Game");
       gameManager.addUser(socket);
     });
 
     socket.on("make-move", (move) => {
-      console.log("♟️ make-move:", move);
       gameManager.makeMove(socket, move);
     });
 
-    
     socket.on("disconnect", () => {
       console.log("❌ disconnected:", socket.id);
     });
