@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: ["http://13.60.56.187", "http://localhost:5173"],
     credentials: true,
   })
 );
