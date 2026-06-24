@@ -1,5 +1,5 @@
 # Stage 1: Build React app
-FROM node:18 AS build
+FROM node:2-alpine
 
 WORKDIR /app
 
@@ -10,12 +10,6 @@ COPY . .
 
 RUN npm run build
 
-# Stage 2: Serve with nginx
-FROM nginx:alpine
+EXPOSE 5173
 
-COPY --from=build /app/dist /usr/share/nginx/html
-
-# Optional: custom nginx config (we can improve later)
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm" , "run" , "dev" ,"--","--host"]
