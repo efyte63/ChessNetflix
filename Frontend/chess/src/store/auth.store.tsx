@@ -56,7 +56,7 @@ export const userauth = create<Store>((set, get) => ({
     const { user, socket } = get();
     if (!user || socket !== null) return; // ✅ prevent duplicate
 
-    const newSocket = io("http://localhost:3000", {
+    const newSocket = io("http://13.60.56.187:3000", {
       query: { userid: user._id },
       transports: ["websocket"], // ✅ single transport, no polling
       autoConnect: true,
