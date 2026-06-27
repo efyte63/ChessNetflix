@@ -34,8 +34,12 @@ export const userauth = create<Store>((set, get) => ({
   login: async (email, password) => {
     try {
       const res = await axiosInstance.post("/auth/v1/login", { email, password });
+      if(res)
+      {
       set({ user: res.data });
       get().socketConnect();
+      }
+      
     } catch (error) {
       console.log(error);
     }

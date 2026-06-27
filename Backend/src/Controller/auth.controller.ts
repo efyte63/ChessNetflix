@@ -5,8 +5,8 @@ import { createtoken } from "../utils/jwt.config.js";
 import { ObjectId } from "mongoose";
 
 export async function register(req: Request, res: Response) {
+  
   const { username, email, password } = req.body;
-
   if (!username) {
     return res.status(400).json({ msg: "username required" });
   }
