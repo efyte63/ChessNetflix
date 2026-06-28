@@ -12,8 +12,8 @@ type User = {
 type Store = {
   user: User | null;
   socket: Socket | null;
-  register: (username: string, email: string, password: string) => void;
-  login: (email: string, password: string) => void;
+  register: (username: string, email: string, password: string) => Promise<boolean>;
+  login: (email: string, password: string) => Promise<boolean>;
   logout: () => void;
   socketConnect: () => void;
   socketDisconnect: () => void;
@@ -26,22 +26,22 @@ export const userauth = create<Store>((set, get) => ({
   register: async (username, email, password) => {
     try {
       await axiosInstance.post("/auth/v1/register", { username, email, password });
+      return true ;
     } catch (error) {
       console.log(error);
+      return false;
     }
   },
 
   login: async (email, password) => {
     try {
       const res = await axiosInstance.post("/auth/v1/login", { email, password });
-      if(res)
-      {
-      set({ user: res.data });
+      set({ user: res.data.user });
       get().socketConnect();
-      }
-      
+      return true;
     } catch (error) {
       console.log(error);
+      return false;
     }
   },
 

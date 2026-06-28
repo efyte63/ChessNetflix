@@ -4,34 +4,26 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const login = userauth((state) => state.login);
-  const User = userauth((state) => state.user);
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    try {
-      setLoading(true);
-      await login(email, password);
+    setLoading(true);
 
-      if(User == null)
-      {
-        alert("user not found type right credentials")
-      }
-      else{
+    const success = await login(email, password);
+
+    setLoading(false);
+
+    if (success) {
         navigate("/netflix");
-      }
-
-      
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setLoading(false);
+    } else {
+        alert("Invalid email or password");
     }
-  };
+};
 
   return (
     <div

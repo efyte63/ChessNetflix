@@ -13,8 +13,16 @@ const Register = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    await register(username, email, password);
-    navigate("/login");
+    const success = await register(username, email, password);
+
+    if(success)
+    {
+      navigate("/login");
+    }
+    else{
+      alert("change your credentials user already present");
+      
+    }    
   };
 
   return (
