@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 import http from "http";
-
+import dns from "node:dns";
 import authRoutes from "./Routes/auth.routes.js";
 import netflixRoutes from "./Routes/netflix.routes.js";
 import { initSocket } from "./config/socket.js";
@@ -28,6 +28,7 @@ app.use(
   })
 );
 
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
 const linkdb = process.env.MONGO_URL;
 
