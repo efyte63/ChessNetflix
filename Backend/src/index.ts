@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import http from "http";
 import dns from "node:dns";
+
 import authRoutes from "./Routes/auth.routes.js";
 import netflixRoutes from "./Routes/netflix.routes.js";
 import { initSocket } from "./config/socket.js";
@@ -13,19 +14,14 @@ dotenv.config();
 
 const app = express();
 
-// ✅ MIDDLEWARES (VERY IMPORTANT)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "http://100.48.100.255:5173",
-      "http://100.48.100.255"
-    ],
+    origin: ["http://localhost:5173", "http://100.48.100.255:5173"],
     credentials: true,
-  })
+  }),
 );
 
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
@@ -36,31 +32,27 @@ if (!linkdb) {
   throw new Error("MONGO_URL is not defined in .env");
 }
 
-// ✅ ROUTES
 app.use("/auth", authRoutes);
 app.use("/netflix", netflixRoutes);
 
-// ✅ CREATE SERVER
 const server = http.createServer(app);
 
-// 🔥 SOCKET INIT (THIS WAS MISSING)
+// Initialize Socket.IO ONCE
 initSocket(server);
 
-// 🚀 DB + SERVER START
 const startServer = async () => {
   try {
     await mongoose.connect(linkdb);
-    console.log("✅ DB connected");
+    console.log("DB connected");
 
     await sendToDb();
-    console.log("✅ Data inserted");
+    console.log("Data inserted");
 
     server.listen(3000, () => {
-      console.log("🚀 Server running on 3000");
+      console.log("Server running on 3000");
     });
-
   } catch (err) {
-    console.log("❌ DB error", err);
+    console.log("DB error", err);
   }
 };
 

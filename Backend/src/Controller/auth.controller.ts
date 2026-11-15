@@ -41,49 +41,52 @@ export async function login(req: Request, res: Response) {
   try {
     const { email, password } = req.body;
 
-    if (!email) {
-      return res.status(400).json({ msg: "email required" });
-    }
-  
-    if (!password) {
-      return res.status(400).json({ msg: "password required" });
+    if (!email || !password) {
+      return res.status(400).json({
+        msg: "email and password required",
+      });
     }
 
     const user = await UserModel.findOne({ email });
 
     if (!user) {
-      return res.status(401).json({ msg: "user not found" });
+      return res.status(401).json({
+        msg: "user not found",
+      });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
 
     if (!isMatch) {
-      return res.status(401).json({ msg: "invalid credentials" });
+      return res.status(401).json({
+        msg: "invalid credentials",
+      });
     }
 
     const token = createtoken(user._id.toString());
 
     if (!token) {
-      return res.status(500).json({ msg: "unable to create token" });
+      return res.status(500).json({
+        msg: "unable to create token",
+      });
     }
 
     res.cookie("jwttoken", token, {
       httpOnly: true,
       secure: false,
       sameSite: "lax",
-      maxAge: 24 * 60 * 60 * 1000
+      maxAge: 24 * 60 * 60 * 1000,
     });
 
     return res.status(200).json({
       msg: "login successful",
-      user
+      user,
     });
-
   } catch (error) {
     console.error("LOGIN ERROR:", error);
 
     return res.status(500).json({
-      msg: "internal server error"
+      msg: "internal server error",
     });
   }
 }

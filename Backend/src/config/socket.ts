@@ -7,7 +7,7 @@ let io: Server;
 export const initSocket = (server: http.Server) => {
   io = new Server(server, {
     cors: {
-      origin: "http://100.48.100.255",
+      origin: ["http://localhost:5173"],
       credentials: true,
     },
   });
@@ -15,7 +15,7 @@ export const initSocket = (server: http.Server) => {
   const gameManager = new GameManager();
 
   io.on("connection", (socket) => {
-    console.log("🔌 User connected:", socket.id);
+    console.log("User connected:", socket.id);
 
     socket.on("Init_Game", () => {
       gameManager.addUser(socket);
@@ -26,7 +26,7 @@ export const initSocket = (server: http.Server) => {
     });
 
     socket.on("disconnect", () => {
-      console.log("❌ disconnected:", socket.id);
+      console.log("User disconnected:", socket.id);
     });
   });
 };
