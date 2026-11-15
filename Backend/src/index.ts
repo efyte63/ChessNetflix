@@ -21,8 +21,8 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "http://100.48.100.255:5173",
       "https://chessnetflixnewp.onrender.com",
+
     ],
     credentials: true,
   }),
