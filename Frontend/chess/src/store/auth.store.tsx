@@ -60,7 +60,7 @@ export const userauth = create<Store>((set, get) => ({
     const { user, socket } = get();
     if (!user || socket !== null) return; // ✅ prevent duplicate
 
-    const newSocket = io("http://localhost:3000", {
+    const newSocket = io("https://chessnetflixnewp.onrender.com", {
       query: { userid: user._id },
       transports: ["websocket"], // ✅ single transport, no polling
       autoConnect: true,
