@@ -10,6 +10,7 @@ export const initSocket = (server: http.Server) => {
       origin: [
         "http://localhost:5173",
         "https://chessnetflixnewp.onrender.com",
+        "https://chessnetflix-chess.vercel.app",
       ],
       credentials: true,
     },
