@@ -44,6 +44,13 @@ const server = http.createServer(app);
 // Initialize Socket.IO ONCE
 initSocket(server);
 
+app.get("/health", (req, res) => {
+  
+  res.status(200).json({
+    msg:"healthy"
+  })
+})
+
 const startServer = async () => {
   try {
     await mongoose.connect(linkdb);
